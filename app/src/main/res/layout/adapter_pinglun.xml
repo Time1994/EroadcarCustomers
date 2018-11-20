@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xlhRatingBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="@dimen/five">
+
+    <RelativeLayout
+        android:layout_width="@dimen/thirtyf"
+        android:layout_height="@dimen/thirtyf"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/fifteen">
+
+        <ImageView
+            android:id="@+id/user_iv"
+            android:layout_width="@dimen/thirtyf"
+            android:layout_height="@dimen/thirtyf"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_photo" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/icon_quan" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/five"
+        android:orientation="vertical"
+        android:padding="@dimen/five">
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="小李汽修"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_fourteen" />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:text="2018-07-31-00:00"
+            android:textColor="@color/blacko"
+            android:textSize="@dimen/text_twelve" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保养"
+                android:textColor="@color/blacko"
+                android:textSize="@dimen/text_twelve" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/order_tv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="@dimen/fifteen"-->
+            <!--android:text="总订单:211单"-->
+            <!--android:textColor="@color/blacko"-->
+            <!--android:textSize="@dimen/text_twelve" />-->
+            <!--<com.example.xlhratingbar_lib.XLHRatingBar-->
+            <!--android:id="@+id/ratingBar"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginLeft="@dimen/ten"-->
+            <!--android:isIndicator="true"-->
+            <!--xlhRatingBar:canEdit="true"-->
+            <!--xlhRatingBar:countSelected="4"-->
+            <!--xlhRatingBar:differentSize="false"-->
+            <!--xlhRatingBar:dividerWidth="@dimen/five"-->
+            <!--xlhRatingBar:starCount="5"-->
+            <!--xlhRatingBar:stateResId="@drawable/bg_ratingbar"-->
+            <!--xlhRatingBar:widthAndHeight="13dp"></com.example.xlhratingbar_lib.XLHRatingBar>-->
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_marginLeft="@dimen/ten"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressDrawable="@drawable/bg_smallratingbar"
+                android:rating="1"
+                android:stepSize="1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pinglun_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:lineSpacingExtra="5dp"
+            android:text="蜜卡用车政企版是由上海谭启新能源汽车租赁有限公司于2017年创建。在新能源汽车产业发展背景下，朝麒源集团控股，适时调整组织架构，整合、联合，快速完成了面向新能源汽车的集销售、租赁、服务、运维、管控、增值应用为一体的多元化联合机构"
+            android:textColor="@color/blacko"
+            android:textSize="@dimen/text_twelve" />
+
+        <com.amos.eroadcarcustomers.view.MyGridView
+            android:id="@+id/img_gv"
+            android:layout_marginTop="@dimen/five"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/eighty"
+            android:columnWidth="@dimen/eighty"
+            android:gravity="center"
+            android:horizontalSpacing="@dimen/ten"
+            android:listSelector="@color/transparent"
+            android:numColumns="auto_fit"
+            android:scrollbars="none"
+            android:visibility="visible"
+            android:stretchMode="none" />
+    </LinearLayout>
+</LinearLayout>

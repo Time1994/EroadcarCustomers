@@ -1,0 +1,4 @@
+include ':app', ':Dialog_lib', ':refresh-header', ':refresh-footer', ':refresh-layout'
+project(':refresh-header').projectDir = new File('SmartRefreshLayout-release/refresh-header')
+project(':refresh-footer').projectDir = new File('SmartRefreshLayout-release/refresh-footer')
+project(':refresh-layout').projectDir = new File('SmartRefreshLayout-release/refresh-layout')

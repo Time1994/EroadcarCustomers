@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!-- 提示框 -->
+    <style name="MyDialog_loading" >
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- &lt;!&ndash;背景透明&ndash;&gt; -->
+    </style>
+
+    <!-- 进度条 -->
+    <style name="newLoading" parent="android:Widget.ProgressBar.Large">
+        <item name="android:indeterminateDrawable">@drawable/loading_bg</item>
+    </style>
+
+    <style name="AnimationShare">
+        <!-- PopupWindow上下弹出的效果 -->
+        <item name="android:windowEnterAnimation">@anim/share_in</item>
+        <item name="android:windowExitAnimation">@anim/share_out</item>
+    </style>
+
+    <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_drawable</item>
+        <item name="android:minHeight">@dimen/twenty</item>
+        <item name="android:maxHeight">@dimen/twenty</item>
+    </style>
+
+    <style name="AnimationPhoto">
+
+        <!-- PopupWindow上下弹出的效果 -->
+        <item name="android:windowEnterAnimation">@anim/photo_in</item>
+        <item name="android:windowExitAnimation">@anim/photo_out</item>
+    </style>
+</resources>

@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 提示框 -->
+    <style name="MyDialog_loading">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- &lt;!&ndash;背景透明&ndash;&gt; -->
+    </style>
+
+    <style name="AnimationPhoto">
+
+        <!-- PopupWindow上下弹出的效果 -->
+        <item name="android:windowEnterAnimation">@anim/photo_in</item>
+        <item name="android:windowExitAnimation">@anim/photo_out</item>
+    </style>
+    <!-- 进度条 -->
+    <style name="newLoading" parent="android:Widget.ProgressBar.Large">
+        <item name="android:indeterminateDrawable">@drawable/loading_bg</item>
+    </style>
+    <!-- 自定义CheckBox和RadioButton中文字和图片之间距离问题解决 -->
+    <style name="radio_style">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:button">@drawable/radiobutton_select</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:drawableLeft">@drawable/radiobutton_select</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+    <!-- 选择照片的按钮样式 -->
+    <style name="btn_photo_style">
+        <item name="android:textSize">@dimen/text_sixteen</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>mama
+        <item name="android:ellipsize">end</item>
+        <item name="android:padding">@dimen/ten</item>
+        <item name="android:background">@drawable/tabrow_w_select</item>
+    </style>
+
+    <!--<style name="myRatingBar" parent="@android:style/Widget.RatingBar">-->
+        <!--<item name="android:progressDrawable">@drawable/bg_ratingbar_ss</item>-->
+        <!--<item name="android:minHeight">13dip</item>-->
+        <!--<item name="android:maxHeight">13dip</item>-->
+    <!--</style>-->
+</resources>

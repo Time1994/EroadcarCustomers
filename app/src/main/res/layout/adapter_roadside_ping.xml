@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/hundred"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/guzhang_cb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cb_greenw_k_select"
+        android:button="@null"
+        android:paddingBottom="@dimen/five"
+        android:paddingLeft="@dimen/ten"
+        android:paddingRight="@dimen/ten"
+        android:paddingTop="@dimen/five"
+        android:text="guzhang"
+        android:textColor="@color/colorw_cb"
+        android:textSize="@dimen/text_twelve"
+        android:gravity="center"/>
+</LinearLayout>

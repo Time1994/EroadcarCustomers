@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayth"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center_horizontal">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitlet_black"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/sure_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fortyf"
+            android:layout_margin="@dimen/ten"
+            android:background="@drawable/btn_selectk"
+            android:enabled="true"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_eighteen" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/all_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_ll"
+        android:layout_below="@id/top"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/name_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/fifteen"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="@dimen/eighty"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/ten"
+                    android:text="姓 名"
+                    android:textColor="@color/blacko"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <com.amos.eroadcarcustomers.view.ClearEditText
+                    android:id="@+id/name_cet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/forty"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请输入姓名"
+                    android:maxLength="8"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingRight="@dimen/ten"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/grayz"
+                    android:textColorHint="@color/grayz"
+                    android:textSize="@dimen/text_fourteen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sex_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/forty"
+                android:layout_below="@id/name_ll"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/fifteen"
+                android:layout_marginTop="1px"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/eighty"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/ten"
+                    android:text="性 别"
+                    android:textColor="@color/blacko"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <RadioGroup
+                    android:id="@+id/sex_rg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/man_rb"
+                        style="@style/radio_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:checked="true"
+                        android:text="男"
+                        android:textColor="@color/grayz"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <RadioButton
+                        android:id="@+id/woman_rb"
+                        style="@style/radio_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/thirty"
+                        android:background="@null"
+                        android:text="女"
+                        android:textColor="@color/grayz"
+                        android:textSize="@dimen/text_fourteen" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pai_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sex_ll"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/fifteen"
+                android:layout_marginTop="1px"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="@dimen/eighty"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/ten"
+                    android:text="车 牌 号"
+                    android:textColor="@color/blacko"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <com.amos.eroadcarcustomers.view.ClearEditText
+                    android:id="@+id/pai_cet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/forty"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请输入车牌号"
+                    android:maxLength="8"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingRight="@dimen/ten"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/grayz"
+                    android:textColorHint="@color/grayz"
+                    android:textSize="@dimen/text_fourteen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jia_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pai_ll"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/fifteen"
+                android:layout_marginTop="1px"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="@dimen/eighty"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/ten"
+                    android:text="车 架 号"
+                    android:textColor="@color/blacko"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <com.amos.eroadcarcustomers.view.ClearEditText
+                    android:id="@+id/jia_cet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/forty"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请输入车架号"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingRight="@dimen/ten"
+                    android:maxLength="18"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/grayz"
+                    android:textColorHint="@color/grayz"
+                    android:textSize="@dimen/text_fourteen" />
+            </LinearLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottom_ll"
+                android:layout_below="@id/jia_ll"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/fifteen"
+                android:layout_marginTop="1px"
+                android:background="@color/white"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/image_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/forty">
+
+                    <TextView
+                        android:layout_width="@dimen/eighty"
+                        android:layout_height="@dimen/forty"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="@dimen/ten"
+                        android:text="车辆照片"
+                        android:textColor="@color/blacko"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/fifteen"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/ten"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/img1_iv"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hundred"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/icon_none_m" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="正面"
+                                android:textColor="@color/blacko"
+                                android:textSize="@dimen/text_twelve" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/ten"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/img2_iv"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hundred"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/icon_none_m" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="背面"
+                                android:textColor="@color/blacko"
+                                android:textSize="@dimen/text_twelve" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/fifteen"
+                        android:layout_marginTop="@dimen/ten"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/ten"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/img3_iv"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hundred"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/icon_none_m" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="左前侧45度"
+                                android:textColor="@color/blacko"
+                                android:textSize="@dimen/text_twelve" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/ten"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/img4_iv"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hundred"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/icon_none_m" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="右前侧45度"
+                                android:textColor="@color/blacko"
+                                android:textSize="@dimen/text_twelve" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/id_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sex_ll"
+                android:layout_margin="@dimen/fifteen"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/fifteen"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <com.amos.eroadcarcustomers.view.ClearEditText
+                    android:id="@+id/id_cet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:background="@drawable/input_selected"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="身份证号码"
+                    android:maxLength="18"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingRight="@dimen/ten"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grayz"
+                    android:textSize="@dimen/text_sixteen" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

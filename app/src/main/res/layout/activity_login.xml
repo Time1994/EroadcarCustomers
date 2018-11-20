@@ -1,0 +1,366 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/twenty"
+        android:layout_marginTop="@dimen/sixty"
+        android:src="@mipmap/icon_login" />
+
+    <RadioGroup
+        android:id="@+id/as_rg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/login_rb"
+            android:layout_width="@dimen/sixty"
+            android:layout_height="@dimen/fortyf"
+            android:background="@drawable/rw_title_selected"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:tag="radio_button0"
+            android:text="登  录"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_sixteen" />
+
+        <RadioButton
+            android:id="@+id/regist_rb"
+            android:layout_width="@dimen/sixty"
+            android:layout_height="@dimen/fortyf"
+            android:background="@drawable/rw_title_selected"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/forty"
+            android:tag="radio_button1"
+            android:text="注  册"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_sixteen" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/login_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/ten"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginRight="@dimen/ten"
+                android:layout_marginTop="@dimen/twentyf"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.amos.eroadcarcustomers.view.ClearEditText
+                    android:id="@+id/mobile_cet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/forty"
+                    android:background="@drawable/input_selected"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请输入手机号"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:paddingLeft="@dimen/thirty"
+                    android:paddingRight="@dimen/ten"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:src="@mipmap/icon_phone" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.amos.eroadcarcustomers.view.ClearEditText
+                    android:id="@+id/pwd_cet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/forty"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/input_selected"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword"
+                    android:paddingLeft="@dimen/thirty"
+                    android:paddingRight="@dimen/ten"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:src="@mipmap/icon_pwd" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/fifteen">
+
+                <!--<TextView-->
+                    <!--android:id="@+id/regist_tv"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="@string/regist"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:textSize="@dimen/text_fourteen" />-->
+
+                <TextView
+                    android:id="@+id/forget_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="@string/forget_pwd"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_fourteen" />
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fortyf"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginRight="@dimen/ten"
+                android:layout_marginTop="@dimen/forty"
+                android:background="@drawable/btn_select"
+                android:text="@string/login"
+                android:enabled="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_sixteen" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/regist_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forty"
+                android:layout_marginTop="@dimen/twentyf"
+                android:focusable="true"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+                android:layout_marginRight="@dimen/ten"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.amos.eroadcarcustomers.view.ClearEditText
+                    android:id="@+id/mobiles_cet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/input_selected"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请输入手机号"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:paddingLeft="@dimen/thirty"
+                    android:paddingRight="@dimen/ten"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/text_fourteen" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:src="@mipmap/icon_phone" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/getcode_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/forty"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:background="@drawable/btn_select"
+                    android:enabled="false"
+                    android:paddingLeft="@dimen/five"
+                    android:paddingRight="@dimen/five"
+                    android:text="@string/getcode"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/getcode_btn"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/ten"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.amos.eroadcarcustomers.view.ClearEditText
+                            android:id="@+id/code_cet"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/forty"
+                            android:background="@drawable/input_selected"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:hint="请输入验证码"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:paddingLeft="@dimen/thirty"
+                            android:paddingRight="@dimen/ten"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/text_fourteen" />
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:src="@mipmap/icon_code" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.amos.eroadcarcustomers.view.ClearEditText
+                    android:id="@+id/pwds_cet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/forty"
+                    android:background="@drawable/input_selected"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword"
+                    android:maxLength="11"
+                    android:paddingLeft="@dimen/thirty"
+                    android:paddingRight="@dimen/ten"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/text_fourteen" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:src="@mipmap/icon_pwd" />
+            </RelativeLayout>
+
+
+            <!--<TextView-->
+                <!--android:id="@+id/forgets_tv"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="right"-->
+                <!--android:layout_marginRight="@dimen/ten"-->
+                <!--android:layout_marginTop="@dimen/ten"-->
+                <!--android:text="@string/forget_pwd"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="@dimen/text_fourteen" />-->
+
+
+            <Button
+                android:id="@+id/regist_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fortyf"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginRight="@dimen/ten"
+                android:layout_marginTop="@dimen/forty"
+                android:background="@drawable/btn_select"
+                android:enabled="false"
+                android:text="@string/regist"
+                android:textColor="@color/color_btn"
+                android:textSize="@dimen/text_sixteen" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

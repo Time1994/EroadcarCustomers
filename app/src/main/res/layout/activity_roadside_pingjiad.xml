@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitlet_black"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/graya" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/sixty"
+        android:layout_height="@dimen/sixty"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/twenty"
+        android:background="@mipmap/icon_photo_em"
+        android:gravity="center_vertical"
+        android:padding="@dimen/three">
+
+        <com.amos.eroadcarcustomers.view.RoundImageView
+            android:id="@+id/photo_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/five"
+        android:text="林师傅"
+        android:textColor="@color/blacko"
+        android:textSize="@dimen/text_sixteen" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/ten">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_centerVertical="true"
+            android:background="@color/graya" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:padding="@dimen/ten"
+            android:text="本次服务评价"
+            android:textColor="@color/blacko"
+            android:textSize="@dimen/text_fourteen" />
+    </RelativeLayout>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/twentyf"
+        android:numStars="5"
+        android:progressDrawable="@drawable/bg_ratingbar_s"
+        android:rating="1"
+        android:stepSize="1"
+        android:isIndicator="true"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginBottom="@dimen/ten" />
+
+    <GridView
+        android:id="@+id/ping_gv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ten"
+        android:layout_marginLeft="@dimen/fifteen"
+        android:layout_marginRight="@dimen/fifteen"
+        android:layout_marginTop="@dimen/twentyf"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/twenty"
+        android:listSelector="@color/transparent"
+        android:numColumns="auto_fit"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/fifteen"
+        android:clickable="false" />
+
+    <TextView
+        android:id="@+id/content_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/twenty"
+        android:text="“师傅认真负责”"
+        android:textColor="@color/blacko"
+        android:textSize="@dimen/text_twelve"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/twenty"/>
+
+
+</LinearLayout>

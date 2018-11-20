@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayth"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitlet_black"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/text_fourteen">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="评论"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/fifteen" />
+
+                    <ImageView
+                        android:id="@+id/camera_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/icon_camera" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/hundredt"
+                    android:background="@color/grayi">
+
+                    <EditText
+                        android:id="@+id/pingjia_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="在此处输入您的评论"
+                        android:maxLength="200"
+                        android:minLines="6"
+                        android:padding="@dimen/five"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/blacko"
+                        android:textSize="@dimen/text_twelve" />
+
+                    <TextView
+                        android:id="@+id/total_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/twentyf"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/pingjia_et"
+                        android:paddingBottom="@dimen/five"
+                        android:paddingRight="@dimen/ten"
+                        android:text="0/200"
+                        android:textColor="@color/blacko"
+                        android:textSize="@dimen/text_twelve" />
+                </RelativeLayout>
+
+                <com.amos.eroadcarcustomers.view.MyGridView
+                    android:id="@+id/pingimage_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/twenty"
+                    android:columnWidth="@dimen/hundred"
+                    android:gravity="center"
+                    android:horizontalSpacing="@dimen/ten"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:stretchMode="none"
+                    android:verticalSpacing="@dimen/ten"
+                     >
+
+                </com.amos.eroadcarcustomers.view.MyGridView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/text_fourteen"
+                    android:background="@color/graya" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="评分"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/fifteen" />
+                </LinearLayout>
+
+                <com.example.xlhratingbar_lib.XLHRatingBar xmlns:xlhRatingBar="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ratingBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    xlhRatingBar:canEdit="true"
+                    android:layout_marginBottom="@dimen/forty"
+                    xlhRatingBar:countSelected="5"
+                    xlhRatingBar:differentSize="false"
+                    xlhRatingBar:dividerWidth="10dp"
+                    xlhRatingBar:starCount="5"
+                    xlhRatingBar:stateResId="@drawable/bg_ratingbar"
+                    xlhRatingBar:widthAndHeight="47dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottom_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/forty"
+                android:background="@color/transparent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/sure_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/fifteen"
+                    android:background="@drawable/btn_selectk"
+                    android:enabled="true"
+                    android:text="提交"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_eighteen" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

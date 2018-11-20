@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitlet_black"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/graya" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/sixty"
+        android:layout_height="@dimen/sixty"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/twenty"
+        android:background="@mipmap/icon_photo_em"
+        android:gravity="center_vertical"
+        android:padding="@dimen/three">
+
+        <com.amos.eroadcarcustomers.view.RoundImageView
+            android:id="@+id/photo_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/five"
+        android:text="林师傅"
+        android:textColor="@color/blacko"
+        android:textSize="@dimen/text_sixteen" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/ten">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_centerVertical="true"
+            android:background="@color/graya" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:padding="@dimen/ten"
+            android:text="评价本次服务"
+            android:textColor="@color/blacko"
+            android:textSize="@dimen/text_fourteen" />
+    </RelativeLayout>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/twentyf"
+        android:numStars="5"
+        android:progressDrawable="@drawable/bg_ratingbar_s"
+        android:rating="1"
+        android:stepSize="1" />
+
+    <GridView
+        android:id="@+id/ping_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/twenty"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/twenty"
+        android:listSelector="@color/transparent"
+        android:numColumns="auto_fit"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/fifteen"
+        android:layout_marginLeft="@dimen/fifteen"
+        android:layout_marginRight="@dimen/fifteen"
+        android:layout_marginBottom="@dimen/fifteen"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ninty"
+        android:layout_margin="@dimen/fifteen"
+        android:background="@drawable/bg_input_mul">
+
+        <EditText
+            android:id="@+id/pingjia_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="其他意见和建议(不会给维修师傅看) 最多100字"
+            android:maxLength="100"
+            android:minLines="6"
+            android:padding="@dimen/ten"
+            android:textColor="@color/black"
+            android:textColorHint="@color/blacko"
+            android:textSize="@dimen/text_twelve" />
+
+        <TextView
+            android:id="@+id/total_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/twentyf"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/five"
+            android:text="0/100"
+            android:textColor="@color/blacko"
+            android:textSize="@dimen/text_twelve" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/ten">
+
+        <Button
+            android:id="@+id/sure_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fortyf"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_marginRight="@dimen/fifteen"
+            android:background="@drawable/btn_selectk"
+            android:enabled="false"
+            android:text="提交评论"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_sixteen" />
+    </LinearLayout>
+</LinearLayout>

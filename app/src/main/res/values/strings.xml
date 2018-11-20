@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">翼禄服务</string>
+
+    <string name="loading">正在加载...</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="dialog_title">温馨提示</string>
+    <string name="login">立即登陆</string>
+    <string name="forget_pwd">找回密码</string>
+    <string name="regist">立即注册</string>
+    <string name="getcode">获取验证码</string>
+    <string name="submit">提交</string>
+    <string name="modify">修改密码</string>
+    <string name="store">门店列表</string>
+    <string name="personal">个人中心</string>
+    <string name="exit_app">再按一次退出程序</string>
+</resources>

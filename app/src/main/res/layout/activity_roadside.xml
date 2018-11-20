@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitlet_black"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/ten">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择故障原因"
+                android:textColor="@color/blacko"
+                android:textSize="@dimen/text_fourteen" />
+
+            <GridView
+                android:id="@+id/guzhang_gv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/seventy"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:horizontalSpacing="@dimen/fifteen"
+                android:listSelector="@color/transparent"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/ten" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:text="上传照片（最多6张）"
+                android:textColor="@color/blacko"
+                android:textSize="@dimen/text_fourteen" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifity"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/five">
+
+                <ImageView
+                    android:id="@+id/camera_iv"
+                    android:layout_width="@dimen/thirtyf"
+                    android:layout_height="@dimen/thirtyf"
+                    android:src="@mipmap/icon_carmer_k" />
+
+                <GridView
+                    android:id="@+id/img_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/thirtyf"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:horizontalSpacing="@dimen/five"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="6"
+                    android:scrollbars="none"
+                    android:verticalSpacing="0px" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:text="添加说明文字（最多50字）"
+                android:textColor="@color/blacko"
+                android:textSize="@dimen/text_fourteen" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/eighty"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@color/grayi">
+
+                <EditText
+                    android:id="@+id/pingjia_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="在此处输入您的问题"
+                    android:maxLength="200"
+                    android:minLines="6"
+                    android:padding="@dimen/five"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/blacko"
+                    android:textSize="@dimen/text_twelve" />
+
+                <TextView
+                    android:id="@+id/total_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/twentyf"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="@dimen/five"
+                    android:paddingRight="@dimen/ten"
+                    android:text="0/50"
+                    android:textColor="@color/blacko"
+                    android:textSize="@dimen/text_twelve" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/sure_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fortyf"
+                android:layout_marginTop="@dimen/twenty"
+                android:background="@drawable/btn_selectk"
+                android:enabled="true"
+                android:text="确定救援"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_sixteen" />
+        </LinearLayout>
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:id="@+id/tel_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll"
+            android:layout_margin="@dimen/ten"
+            android:src="@mipmap/icon_map_tel" />
+
+        <ImageView
+            android:id="@+id/que_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/ten"
+            android:src="@mipmap/icon_map_ques" />
+    </RelativeLayout>
+
+</RelativeLayout>

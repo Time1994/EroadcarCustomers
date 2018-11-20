@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.amos.eroadcarcustomers">
+
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+    <application
+        android:name="com.amos.eroadcarcustomers.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_login"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+
+
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="0Gh2bMImiDuZftDKfQRonifSt3eyityi" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="1b7d75cd5b42a987cd6bd3d1" />
+
+        <activity android:name=".activity.LoadingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <!--<activity android:name=".activity.RegistActivity" />-->
+        <activity android:name=".activity.ForgetActivity" />
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.PersonalCenterActivity" />
+        <activity android:name=".activity.DataInfoActivity" />
+        <activity android:name=".activity.StoreInfoActivity" />
+        <activity android:name=".activity.PingJiaActivity" />
+        <activity android:name=".activity.MoreServiceActivity" />
+        <activity android:name=".activity.QuestionActivity" />
+        <activity android:name=".activity.RoadsideActivity" />
+        <activity android:name=".activity.RoadsideTActivity" />
+        <activity android:name=".activity.RoadsideCancelActivity" />
+        <activity android:name=".activity.RoadsidePingJiaActivity" />
+        <activity android:name=".activity.RoadsidePingJiadActivity" />
+
+    </application>
+
+
+</manifest>

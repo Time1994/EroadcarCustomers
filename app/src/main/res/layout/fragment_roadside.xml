@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifity"
+        android:background="@color/white">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="订单"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_eighteen" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_rl"
+        android:background="@color/gray">
+
+        <RadioGroup
+            android:id="@+id/top_rg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty"
+            android:layout_marginTop="1px"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/five">
+
+            <RadioButton
+                android:id="@+id/all_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:button="@null"
+                android:checked="true"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingTop="@dimen/five"
+                android:paddingRight="@dimen/fifteen"
+                android:paddingBottom="@dimen/five"
+                android:text="全部"
+                android:textColor="@color/color_rb"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginBottom="@dimen/five"
+                android:background="@color/green" />
+
+            <RadioButton
+                android:id="@+id/done_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:button="@null"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingTop="@dimen/five"
+                android:paddingRight="@dimen/fifteen"
+                android:paddingBottom="@dimen/five"
+                android:text="已完成"
+                android:textColor="@color/color_rb"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginBottom="@dimen/five"
+                android:background="@color/green" />
+
+            <RadioButton
+                android:id="@+id/ping_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:button="@null"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingTop="@dimen/five"
+                android:paddingRight="@dimen/fifteen"
+                android:paddingBottom="@dimen/five"
+                android:text="已评价"
+                android:textColor="@color/color_rb"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginBottom="@dimen/five"
+                android:background="@color/green" />
+
+            <RadioButton
+                android:id="@+id/cancel_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:button="@null"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingTop="@dimen/five"
+                android:paddingRight="@dimen/fifteen"
+                android:paddingBottom="@dimen/five"
+                android:text="已取消"
+                android:textColor="@color/color_rb"
+                android:textSize="@dimen/text_fourteen" />
+        </RadioGroup>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/top_rg"
+            app:srlAccentColor="#00000000"
+            app:srlEnablePreviewInEditMode="true"
+            app:srlPrimaryColor="#00000000">
+
+            <!--
+             下拉刷新样式WaterDropHeader WaveSwipeHeader TaurusHeader StoreHouseHeader PhoenixHeader
+             FunGameBattleCityHeader FlyRefreshHeader DropBoxHeader DeliveryHeader BezierCircleHeader
+             MaterialHeader FunGameHitBlockHeader-->
+
+            <com.scwang.smartrefresh.header.WaterDropHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ListView
+                android:id="@+id/roadside_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/top_rg"
+                android:layout_margin="@dimen/ten"
+                android:divider="@color/gray"
+                android:dividerHeight="@dimen/five"
+                android:listSelector="@null"
+                android:scrollbars="none" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/none_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/top_rg"
+            android:layout_margin="@dimen/ten"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_none_list" />
+
+            <TextView
+                android:id="@+id/none_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fifteen"
+                android:text="暂无订单"
+                android:textColor="@color/grayz"
+                android:textSize="@dimen/text_fourteen" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
